@@ -1,13 +1,8 @@
 package com.intzi.main;
 
-import com.intzi.observer.FirstSubscriber;
-import com.intzi.observer.Publisher;
-import com.intzi.observer.SecondSubscriber;
-import com.intzi.strategy.FakeEncryptionTwo;
-import com.intzi.strategy.TextFile;
-import com.intzi.template_method.FileProcessor;
-import com.intzi.template_method.WriteTextFile;
-import com.intzi.template_method.WriteXML;
+import com.intzi.observer.example2.DisplayDevice;
+import com.intzi.observer.example2.StatisticsDisplay;
+import com.intzi.observer.example2.WeatherStation;
 
 public class MyMain {
 
@@ -89,6 +84,16 @@ public class MyMain {
 			publisher.addNewspaperAndNotify("Hello 1");
 			publisher.addNewspaperAndNotify("Hello 2");
 		*/
+
+		// Observer Design Pattern 2
+		/*
+			WeatherStation station = new WeatherStation();
+			new DisplayDevice(station);
+			new DisplayDevice(station);
+			new StatisticsDisplay(station);
+			station.start();
+		*/
+
 	}
 
 }

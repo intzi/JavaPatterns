@@ -1,4 +1,4 @@
-package com.intzi.observer;
+package com.intzi.observer.example1;
 
 import java.util.ArrayList;
 

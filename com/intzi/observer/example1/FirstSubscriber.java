@@ -1,13 +1,14 @@
-package com.intzi.observer;
+package com.intzi.observer.example1;
 
-public class SecondSubscriber implements Observer{
+public class FirstSubscriber implements Observer {
 
     private String latestNewspaper;
 
-    public SecondSubscriber(Subject subject){
+    public FirstSubscriber(Subject subject){
         latestNewspaper = "";
         subject.addObserver(this);
     }
+
 
     @Override
     public void update(String newspaper) {
@@ -16,6 +17,6 @@ public class SecondSubscriber implements Observer{
     }
 
     public void print(){
-        System.out.println("Newspaper Sub 2: "+latestNewspaper);
+        System.out.println("Newspaper Sub 1: "+latestNewspaper);
     }
 }

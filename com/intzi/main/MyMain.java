@@ -1,5 +1,10 @@
 package com.intzi.main;
 
+import com.intzi.observer.FirstSubscriber;
+import com.intzi.observer.Publisher;
+import com.intzi.observer.SecondSubscriber;
+import com.intzi.strategy.FakeEncryptionTwo;
+import com.intzi.strategy.TextFile;
 import com.intzi.template_method.FileProcessor;
 import com.intzi.template_method.WriteTextFile;
 import com.intzi.template_method.WriteXML;
@@ -64,8 +69,26 @@ public class MyMain {
 		txt.fileOpenEditAndSave();
 		((WriteXML)txt).xmlMethod();
 		*/
-		
-		
+
+
+		// Strategy Design Pattern
+		/*
+			TextFile file = new TextFile("Hello i'm Dimitris");
+			file.encrypt();
+			System.out.println(file);
+			file.setEncrypt(new FakeEncryptionTwo());
+			file.encrypt();
+			System.out.println(file);
+		*/
+
+		// Observer Design Pattern
+		/*
+			Publisher publisher = new Publisher();
+			FirstSubscriber s1 = new FirstSubscriber(publisher);
+			SecondSubscriber s2 = new SecondSubscriber(publisher);
+			publisher.addNewspaperAndNotify("Hello 1");
+			publisher.addNewspaperAndNotify("Hello 2");
+		*/
 	}
 
 }

@@ -1,5 +1,9 @@
 package com.intzi.main;
 
+import com.intzi.decorator.Coffee;
+import com.intzi.decorator.Espresso;
+import com.intzi.decorator.condiments.Mocha;
+import com.intzi.decorator.condiments.SteamedMilk;
 import com.intzi.observer.example2.DisplayDevice;
 import com.intzi.observer.example2.StatisticsDisplay;
 import com.intzi.observer.example2.WeatherStation;
@@ -94,6 +98,15 @@ public class MyMain {
 			station.start();
 		*/
 
+		// Decorator Pattern - Coffee Shop
+		/*
+			Coffee espresso = new Espresso();
+			System.out.println("Coffee: "+espresso.getDescription()+String.format(" %.2f$", espresso.cost()));
+			espresso = new Mocha(espresso);
+			espresso = new Mocha(espresso);
+			espresso = new SteamedMilk(espresso);
+			System.out.println("Coffee: "+espresso.getDescription()+String.format(" %.2f$", espresso.cost()));
+		*/
 	}
 
 }
